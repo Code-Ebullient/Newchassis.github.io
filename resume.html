@@ -3,7 +3,8 @@
 <head> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script src="form.js" type="text/javascript"></script>
     <title> Modified Resume </title>
 
 <!-- embedded css styling -->
@@ -95,7 +96,19 @@
         .section-right h2{
             color: green;
         }
-	.footer p {
+
+        .img {
+            height: 30%;
+        }
+
+        #pic {
+            border: 2px solid black;
+            border-radius: 100%;
+            box-shadow: 0 5px 5px #34495e;
+            box-sizing: border-box;
+        }
+
+	   .footer p {
 	    font-weight: bold;
 	    text-align: center;
 	}
@@ -156,19 +169,39 @@
                         <p>Website: <a href="www.themuses.com.ng"></a>themuses</p>
                     </div>
 
-                    <div class="lists">
-                        <h2>Social</h2>
-                        <p>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook-square" alt="facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter-square" alt="twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin-square" alt="linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-github-square" alt="github"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-square" alt="google"></i></a></li>
-                                <li><a href="#"><i class="fa fa-timbu-square" alt="timbu"></i></a></li>
-                                <li><a href="#"><i class="fa fa-lucid-square" alt="lucid"></i></a></li>
-                                <li><a href="#"><i class="fa fa-cloudinary-square" alt="cloudinary"></i></a></li>
-                            </ul>
+                    <div class="Img">
+                       <img src="https://res.cloudinary.com/the-muses/image/upload/v1566531231/IMG_-cb268b_jeh05w.jpg"  alt="Image"  id="pic" width="200">
+
+                    <div class="container">
+        <form name="myForm" action="javascript:myForm" id="formRequest "onsubmit="return validate(this)" method="post">
+            <label for="message"><h2>Get In Touch</h2></label>
+            <hr>
+
+            <label for="title">Title</label>
+            <select id="title" name="title">
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Miss.">Miss.</option>
+                <option value="Other">Other.</option>
+            </select>
+
+        <hr>
+            <label for="fname">Full Name <abbr title="required">*</abbr></label>
+            <input type="text" name="Fullname" id="fname" minlength="4" placeholder="Your Name..">
+
+        <hr>
+            <label for="email">Email <abbr title="required">*</abbr></label>
+            <input type="email" name="Email" id="email" size="30" placeholder="Email..">
+        <hr>
+
+
+            <label for="message">Comment <abbr title="required">*</abbr></label>
+            <textarea id="message" name="message" placeholder="Write Something..." style="height: 200px" minlength="20" spellcheck="true"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
                             
 
                       <!--       <span><a href="https://www.facebook.com/peace-amara.5" alt="Facebook Icon">Facebook</a></span>
